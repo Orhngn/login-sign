@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Sign</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kalam&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="header">
+                <h2>Login-Website</h2>
+            </div>
+            <div class="menü-login">
+                <ul>
+                    <li>HOME</li>
+                    <li onclick="gosterLogin()">LOGİN</li>
+                    <li onmouseover="gosterContact()" onmouseout="gizleContact()">CONTACT</li>
+                </ul>
+            </div>
+        </div>
+        <div class="home">
+        </div>
+        <div class="login" id="login">
+            <div>
+                <h2>LOGİN</h2>
+                <div>
+                    <label for="">Kullanıcı Adı : </label><br>
+                    <input type="text" id="admin" placeholder="Kullanıcı Adı" required><br>
+                </div>
+                <div>
+                    <label for="">Şifreniz : </label><br>
+                    <input type="password" id="pass" placeholder="Şifreniz" required><br>
+                    <button type="submit" id="btn" onclick="gizleLogin()">SEND</button><br>
+                    <p onclick="gizleLogin()">Parolamı Unuttum</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="contact" id="contact">
+
+            <p><span class="material-symbols-outlined">
+                    call
+                </span> : 0123456789</p>
+            <p>
+                <span class="material-symbols-outlined">
+                    location_city
+                </span> Adres : Lorem ipsum dolor sit amet consectetur adipisicing.
+            </p>
+
+        </div>
+
+        <div class="footer">
+            <div class="footer-1">
+                <span>Anasayfa</span>
+                <span>Hakkımızda</span>
+                <span>Bize Ulaşın</span>
+            </div>
+            <div class="footer-2">
+                <span>Coded By Orhun GÜN</span> <span class="material-symbols-outlined">
+                    integration_instructions</span>
+            </div>
+            <div class="footer-3">
+                <img src="/facebook.png" alt="">
+                <img src="/instagram.png" alt="">
+                <img src="/linkedin.png" alt="">
+                <img src="/twitter.png" alt="">
+                <img src="/telegram.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function gosterLogin() {
+            document.getElementById('login').style.visibility = 'visible'; // login e tıklayınca login kısmı açılıyor
+        }
+        function gizleLogin() {
+            document.getElementById('login').style.visibility = 'hidden'; // send ve parolamı unuttuma tıklayınca login kapanıyor
+        }
+
+        function gosterContact() {
+            document.getElementById('contact').style.visibility = 'visible'; // contact ın üzerinde durunca contact bilgileri açılıyor
+        }
+        function gizleContact() {
+            document.getElementById('contact').style.visibility = 'hidden'; // contact ın üzrinden gidince contact kısmı kapanıyor
+        }
+    </script>
+
+</body>
+
+</html>
